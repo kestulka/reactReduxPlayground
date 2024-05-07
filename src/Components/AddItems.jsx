@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addItems } from "../features/shoppingListSlice";
+import { addAsync } from "../features/shoppingListSlice";
 
 const AddItems = () => {
   const [inputValue, setInputValue] = useState("");
@@ -9,7 +9,7 @@ const AddItems = () => {
   const handleAddItem = (e) => {
     e.preventDefault();
 
-    dispatch(addItems(inputValue));
+    dispatch(addAsync(inputValue));
     setInputValue("");
   };
 
